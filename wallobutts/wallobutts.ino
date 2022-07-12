@@ -31,7 +31,9 @@ void loop() {
 		// Show the leds
 		FastLED.show(); 
 		// now that we've shown the leds, reset the i'th led to black
-		leds[i] = CRGB::Black;
+		// leds[i] = CRGB::Black;
+    // leave two leds lit
+    leds[i-1] = CRGB::Black;
 		// fadeall();
 		// Wait a little bit before we loop around and do it again
 		delay(100);
@@ -45,7 +47,7 @@ void loop() {
 		// Show the leds
 		FastLED.show();
 		// now that we've shown the leds, reset the i'th led to black
-		leds[i] = CRGB::Black;
+		leds[i+1] = CRGB::Black;
 		// fadeall();
 		// Wait a little bit before we loop around and do it again
 		delay(100);
